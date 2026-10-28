@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { width: 320px; font-family: 'Malgun Gothic', sans-serif; padding: 12px; }
+    h3 { margin: 0 0 10px; font-size: 14px; }
+    input { width: 100%; padding: 6px; box-sizing: border-box; margin-bottom: 8px; }
+    button { padding: 6px 12px; margin-right: 6px; cursor: pointer; }
+    #log { margin-top: 10px; font-size: 12px; max-height: 120px; overflow-y: auto; background: #f5f5f5; padding: 6px; }
+    label { display: flex; align-items: center; gap: 6px; font-size: 12px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h3>웹훅 설정</h3>
+  <input id="webhookUrl" type="text" placeholder="https://example.com/webhook/xxxx" />
+  <label>
+    <input id="periodicEnabled" type="checkbox" />
+    30분 주기 자동 핑 활성화
+  </label>
+  <button id="saveBtn">저장</button>
+  <button id="testBtn">테스트 전송</button>
+  <div id="log">전송 로그가 여기에 표시됩니다.</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

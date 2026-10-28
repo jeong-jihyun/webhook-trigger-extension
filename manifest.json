@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Webhook Trigger",
+  "version": "1.0.0",
+  "description": "선택한 텍스트나 현재 페이지 정보를 웹훅 주소로 즉시 전송하는 트리거 확장 프로그램",
+  "permissions": ["contextMenus", "storage", "activeTab", "alarms", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Webhook Trigger"
+  }
+}
